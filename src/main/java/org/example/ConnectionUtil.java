@@ -13,7 +13,7 @@ public class ConnectionUtil {
         hikariConfig.setUsername("root");
         hikariConfig.setPassword("");
         hikariConfig.setMaximumPoolSize(10);
-        hikariConfig.setMaximumPoolSize(5);
+        hikariConfig.setMinimumIdle(5);
         hikariConfig.setMaxLifetime(10 * 60_000);
         hikariConfig.setIdleTimeout(60_000);
         dataSource = new HikariDataSource(hikariConfig);
